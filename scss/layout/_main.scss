@@ -1,0 +1,216 @@
+@include clearfix();
+@import "../base/animations";
+main{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#section-about {
+  padding: 7rem 0 6.5rem 6rem;
+  width: 66.666666%;
+  min-height: 60.5vh;
+  float: left;
+  border-bottom: 2px solid $color-white;
+
+  @include mq("small-screen-1") {
+    width: 100%;
+  }
+
+  @include mq("small-screen-2") {
+    width: 100%;
+    height: 40rem;
+    padding: 7rem 6rem 2rem 6rem;
+  }
+
+  @include mq("small-screen-3") {
+    width: 100%;
+    height: 30rem;
+    padding: 7rem 6rem 1rem 6rem;
+  }
+  &-photo {
+    position: relative;
+    width: 35%;
+    float: left;
+    @include mq("small-screen-1") {
+      width: 100%;
+    }
+    @include mq("small-screen-2") {
+      width: 100%;
+    }
+    @include mq("small-screen-3") {
+      width: 100%;
+    }
+    .photo {
+      position: absolute;
+      width: 80%;
+      height: auto;
+      transition: all 0.5s;
+      animation: moveInLeft 3s normal 1.5s;
+
+      &:hover {
+        transform: scale(1.1);
+        padding: 1rem;
+        border: 3px solid $color-primary;
+        z-index: 10;
+      }
+      &:nth-child(1) {
+        top: 20rem;
+        left: -1vw;
+        @include mq("small-screen-1") {
+          width: 20rem;
+          height: auto;
+          transform: translateX(5rem) translateY(-5rem);
+        }
+        @include mq("small-screen-2") {
+          max-width: 25vh;
+          width: 20rem;
+          height: auto;
+          transform: translateX(-1rem) translateY(7rem);
+        }
+        @include mq("small-screen-3") {
+          max-width: 33vh;
+          width: 15rem;
+          height: auto;
+          transform: translateX(-4rem) translateY(-5rem);
+        }
+      }
+      &:nth-child(2) {
+        top: -5rem;
+        left: 33vw;
+        @include mq("small-screen-1") {
+          width: 22rem;
+          height: auto;
+          transform: translateX(1rem) translateY(1rem);
+        }
+        @include mq("small-screen-2") {
+          max-width: 25vh;
+          width: 20rem;
+          height: auto;
+          transform: translateX(7rem);
+        }
+        @include mq("small-screen-3") {
+          width: 15rem;
+          height: auto;
+          transform: translateX(2rem);
+        }
+      }
+      &:nth-child(3) {
+        width: 70%;
+        height: auto;
+        left: 45vw;
+        top: 0rem;
+        @include mq("small-screen-1") {
+          width: 20rem;
+          height: auto;
+          transform: translateX(20rem) translateY(-1rem);
+        }
+        @include mq("small-screen-2") {
+          max-width: 25vh;
+          width: 18rem;
+          height: auto;
+          transform: translateX(8rem) translateY(15rem);
+        }
+        @include mq("small-screen-3") {
+          max-width: 30vh;
+          width: 15rem;
+          height: auto;
+          transform: translateX(8rem) translateY(5rem);
+        }
+      }
+      &:nth-child(4) {
+        top: -3rem;
+        left: 10vw;
+        @include mq("small-screen-1") {
+          width: 21rem;
+          height: auto;
+          transform: translateX(-10rem) translateY(-2rem);
+        }
+        @include mq("small-screen-2") {
+          max-width: 30vh;
+          width: 20rem;
+          height: auto;
+          transform: translateX(-5rem) translateY(5rem);
+        }
+        @include mq("small-screen-3") {
+          max-width: 32vh;
+          width: 17rem;
+          height: auto;
+          transform: translateX(-7rem) translateY(-0.5rem);
+        }
+      }
+      &:nth-child(5) {
+        width: 80%;
+        height: auto;
+        top: 21rem;
+        left: 22vw;
+        @include mq("small-screen-1") {
+          width: 20rem;
+          height: auto;
+          transform: translateX(12rem) translateY(-5rem);
+        }
+        @include mq("small-screen-2") {
+          max-width: 28vh;
+          width: 20rem;
+          height: auto;
+          transform: translateX(2rem) translateY(-10rem);
+        }
+        @include mq("small-screen-3") {
+          max-width: 30vh;
+          width: 19rem;
+          height: auto;
+          transform: translateX(5rem) translateY(-6rem);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        box-shadow: 3px 3px 9px 0px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+#section-etc {
+  width: 33.333334%;
+  float: left;
+  height: inherit;
+  
+  animation: moveInRight 3s normal 1.5s;
+
+  @include mq("small-screen-1") {
+    width: 100%;
+  }
+  @include mq("small-screen-2") {
+    width: 100%;
+  }
+  @include mq("small-screen-3") {
+    width: 100%;
+  }
+
+  [id^="etc-"] {
+    height: 100%;
+  }
+  .etc {
+    overflow: hidden;
+
+    @include mq("small-screen-1") {
+      width: 33.33333%;
+      float: left;
+      height: 15rem;
+    }
+    @include mq("small-screen-2") {
+      width: 33.33333%;
+      float: left;
+      height: 13rem;
+      overflow: hidden;
+    }
+    @include mq("small-screen-3") {
+      width: 100%;
+      height: 12rem;
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
