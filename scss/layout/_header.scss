@@ -1,0 +1,230 @@
+@import "../base/animations";
+
+// Outer navigation wrapper
+#nav {
+  height: $nav-height;
+  background: linear-gradient(
+    to right,
+    $color-primary,
+    $color-primary 25%,
+    $color-secondary 33%
+  );
+
+  // Container with no padding for navbar
+  &-container {
+    max-width: $content-width;
+    margin: 0 auto;
+    height: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+  // Logo and branding
+  .brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    a,
+    a:visited {
+      color: $nav-font-color;
+      text-decoration: none;
+    }
+    img {
+      width: 70%;
+      margin-top: 9px;
+    }
+  }
+
+  // Navigation
+  nav {
+    float: right;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        float: left;
+        position: relative;
+        a,
+        a:visited {
+          display: block;
+          padding: 0 20px;
+          line-height: $nav-height;
+          color: $nav-font-color;
+          text-decoration: none;
+          font-size: 1.8rem;
+          &:hover {
+            background: $color-white-opacity;
+            color: $nav-font-color;
+          }
+          &:not(:only-child):after {
+            padding-left: 4px;
+            content: " ▾";
+            display: inline-block;
+          }
+        } // Dropdown list
+        ul li {
+          min-width: 190px;
+          a {
+            padding: 15px;
+            line-height: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          &:hover {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  // Dropdown list binds to JS toggle event
+  .nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Mobile navigation */
+
+  // Binds to JS Toggle
+  &-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    height: $nav-height;
+    width: $nav-height;
+  }
+  @media only screen and (max-width: 798px) {
+    // Hamburger nav visible on mobile only
+    #-mobile {
+      display: block;
+    }
+    nav {
+      width: 100%;
+      padding: $nav-height 0 15px;
+      ul {
+        li {
+          width: 35vw;
+          float: none;
+          a {
+            width: 35vw;
+            display: inline-block;
+            padding: 15px;
+            line-height: 20px;
+          }
+          ul li a {
+            width: 35vw;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+
+    .nav-dropdown {
+      position: static;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    .nav-list {
+      display: block !important;
+    }
+  }
+  &-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    span,
+    span:before,
+    span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: $nav-font-color;
+      position: absolute;
+      display: block;
+      content: "";
+      transition: all 300ms ease-in-out;
+    }
+    span:before {
+      top: -10px;
+    }
+    span:after {
+      bottom: -10px;
+    }
+    &.active span {
+      background-color: transparent;
+      &:before,
+      &:after {
+        top: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// Page content
+body article {
+  width: 100%;
+  height: 90vh;
+  text-indent: -99999999px;
+  background-image: url(../images/main.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+
+  span.cloud1:before {
+    content: "";
+    position: absolute;
+    top: 12rem;
+    right: 11rem;
+    width: 13rem;
+    height: 8rem;
+    background-image: url(../images/Cloud1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: moveOn 1s linear alternate forwards infinite;
+  }
+  span.cloud2:before {
+    content: "";
+    position: absolute;
+    top: 25rem;
+    right: 117rem;
+    width: 17rem;
+    height: 12rem;
+    background-image: url(../images/Cloud2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: moveOn 1s linear alternate forwards infinite 0.3s;
+  }
+  span.cloud3:before {
+    content: "";
+    position: absolute;
+    top: 28.5rem;
+    right: 17rem;
+    width: 23rem;
+    height: 14rem;
+    background-image: url(../images/Cloud3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: moveOn 1s linear alternate forwards infinite 0.8s;
+  }
+}
