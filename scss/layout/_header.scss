@@ -81,7 +81,6 @@
     }
   }
 
-  // Dropdown list binds to JS toggle event
   .nav-dropdown {
     position: absolute;
     display: none;
@@ -91,7 +90,6 @@
 
   /* Mobile navigation */
 
-  // Binds to JS Toggle
   &-mobile {
     display: none;
     position: absolute;
@@ -102,7 +100,6 @@
     width: $nav-height;
   }
   @media only screen and (max-width: 798px) {
-    // Hamburger nav visible on mobile only
     #-mobile {
       display: block;
     }
@@ -113,6 +110,7 @@
         li {
           width: 35vw;
           float: none;
+          background-color: rgba(255, 255, 255, 0.5);
           a {
             width: 35vw;
             display: inline-block;
@@ -186,7 +184,18 @@ body article {
   background-image: url(../images/main.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
+  @include mq("small-screen-1") {
+    height: 70vh;
+  }
+
+  @include mq("small-screen-2") {
+    height: 50vh;
+  }
+
+  @include mq("small-screen-3") {
+    height: 40vh;
+  }
 
   span.cloud1:before {
     content: "";
@@ -200,6 +209,17 @@ body article {
     background-repeat: no-repeat;
     background-size: contain;
     animation: moveOn 1s linear alternate forwards infinite;
+    @include mq("small-screen-1") {
+      width: 20rem;
+    }
+
+    @include mq("small-screen-2") {
+      width: 15rem;
+    }
+
+    @include mq("small-screen-3") {
+      width: 10rem;
+    }
   }
   span.cloud2:before {
     content: "";
@@ -213,11 +233,22 @@ body article {
     background-repeat: no-repeat;
     background-size: contain;
     animation: moveOn 1s linear alternate forwards infinite 0.3s;
+    @include mq("small-screen-1") {
+      width: 20rem;
+    }
+
+    @include mq("small-screen-2") {
+      width: 15rem;
+    }
+
+    @include mq("small-screen-3") {
+      width: 10rem;
+    }
   }
   span.cloud3:before {
     content: "";
     position: absolute;
-    top: 28.5rem;
+    top: 27.5rem;
     right: 17rem;
     width: 23rem;
     height: 14rem;
@@ -226,5 +257,16 @@ body article {
     background-repeat: no-repeat;
     background-size: contain;
     animation: moveOn 1s linear alternate forwards infinite 0.8s;
+    @include mq("small-screen-1") {
+      width: 20rem;
+    }
+
+    @include mq("small-screen-2") {
+      width: 15rem;
+    }
+
+    @include mq("small-screen-3") {
+      width: 10rem;
+    }
   }
 }

@@ -291,6 +291,7 @@ h2:hover {
   #nav nav ul li {
     width: 35vw;
     float: none;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   #nav nav ul li a {
     width: 35vw;
@@ -372,6 +373,24 @@ body article {
   background-size: cover;
 }
 
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  body article {
+    height: 70vh;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  body article {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body article {
+    height: 40vh;
+  }
+}
+
 body article span.cloud1:before {
   content: "";
   position: absolute;
@@ -385,6 +404,24 @@ body article span.cloud1:before {
   background-size: contain;
   -webkit-animation: moveOn 1s linear alternate forwards infinite;
           animation: moveOn 1s linear alternate forwards infinite;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  body article span.cloud1:before {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  body article span.cloud1:before {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body article span.cloud1:before {
+    width: 10rem;
+  }
 }
 
 body article span.cloud2:before {
@@ -402,10 +439,28 @@ body article span.cloud2:before {
           animation: moveOn 1s linear alternate forwards infinite 0.3s;
 }
 
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  body article span.cloud2:before {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  body article span.cloud2:before {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body article span.cloud2:before {
+    width: 10rem;
+  }
+}
+
 body article span.cloud3:before {
   content: "";
   position: absolute;
-  top: 28.5rem;
+  top: 27.5rem;
   right: 17rem;
   width: 23rem;
   height: 14rem;
@@ -415,6 +470,24 @@ body article span.cloud3:before {
   background-size: contain;
   -webkit-animation: moveOn 1s linear alternate forwards infinite 0.8s;
           animation: moveOn 1s linear alternate forwards infinite 0.8s;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  body article span.cloud3:before {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 899px) {
+  body article span.cloud3:before {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body article span.cloud3:before {
+    width: 10rem;
+  }
 }
 
 ::after {
