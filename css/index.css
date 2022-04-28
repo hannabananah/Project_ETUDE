@@ -94,8 +94,8 @@ ol, ul, li {
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -105,8 +105,8 @@ ol, ul, li {
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -168,8 +168,8 @@ h2:hover {
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -402,8 +402,8 @@ body article span.cloud1:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-animation: moveOn 1s linear alternate forwards infinite;
-          animation: moveOn 1s linear alternate forwards infinite;
+  -webkit-animation: moveOn 1.2s linear alternate forwards infinite;
+          animation: moveOn 1.2s linear alternate forwards infinite;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1200px) {
@@ -435,8 +435,8 @@ body article span.cloud2:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-animation: moveOn 1s linear alternate forwards infinite 0.3s;
-          animation: moveOn 1s linear alternate forwards infinite 0.3s;
+  -webkit-animation: moveOn 1.3s linear alternate forwards infinite 0.3s;
+          animation: moveOn 1.3s linear alternate forwards infinite 0.3s;
 }
 
 @media screen and (min-width: 900px) and (max-width: 1200px) {
@@ -460,10 +460,10 @@ body article span.cloud2:before {
 body article span.cloud3:before {
   content: "";
   position: absolute;
-  top: 27.5rem;
-  right: 17rem;
-  width: 23rem;
-  height: 14rem;
+  top: 28rem;
+  right: 16rem;
+  width: 25rem;
+  height: 16rem;
   background-image: url(../images/Cloud3.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -536,8 +536,8 @@ body article span.cloud3:before {
             transform: scale(1);
   }
   to {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
